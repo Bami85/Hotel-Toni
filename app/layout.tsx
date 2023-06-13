@@ -4,7 +4,7 @@ import Navbar from "./components/navbar/Navbar"
 
 
 export const metadata = {
-  title: 'Hotel Toni',
+  title: 'Hotel Toni ',
   description: 'Hotel Toni Bookning',
 }
 
