@@ -28,7 +28,7 @@ const Search = () => {
             px-6
           "
         >
-            Anywhere
+             Albania Llogora
             </div>
         </div>
       </div>
