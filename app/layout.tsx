@@ -1,8 +1,10 @@
 import './globals.css'
 import {Nunito} from "next/font/google"
-import Navbar from "./components/navbar/Navbar"
-import ClientOnly from './components/ClientOnly'
-import Modal from './components/modals/Modal'
+import Navbar from './src/components/Appbar/Navbar';
+import React from 'react';
+import HeroSection from './src/app/(home)/(shared)/Hero-Section';
+import AboutSection from './src/app/(home)/(shared)/About-Section';
+import CheckoutSection from './src/app/(home)/(shared)/Checkout-Section';
 
 
 export const metadata = {
@@ -24,11 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className= {font.className}>{children}
-      <ClientOnly>
-         <Modal title= "Hello Hotel Toni" isOpen/>
-         <Navbar/> 
-       </ClientOnly>
-     
+      <>
+      <Navbar logoColor={`invert`} className={`bg-transparent p-3`} color={`text-white-50`} position={`absolute`}/>
+        <HeroSection />
+        <CheckoutSection />
+        <AboutSection />
+    </>
       </body>
     </html>
   )
