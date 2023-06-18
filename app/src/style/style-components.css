@@ -29,11 +29,7 @@
     @import url('../components/Card/card-style.css');
     @import url('../components/Skeleton/skeleton-style.css');
     @import url('../components/ListBox/list-box-template.module.css');
-    /* @import url('../app/(home)/(shared)/style.css'); */
-   
-    /* @import url('../app/(home)/style.css');
-    @import url('../app/(home)/(shared)/style.css'); */
-
+    @import url('../app/(home)/(shared)/style.css');
     @import url('../app/hotels/(hotels-info)/style.module.css');
 }
 
