@@ -1,5 +1,5 @@
 interface HotelFeaturesType {
-    name:`Gym` | `Restaurant` | `Swimming Pool` | `Wi-Fi`,
+    name:`Gym` | `Restaurant`  | `Wi-Fi`,
     value:boolean
 }
 
