@@ -1,4 +1,4 @@
-import Navbar from '@/app/src/components/Appbar/Navbar';
+import Navbar from '../../../components/Appbar/Navbar';
 import React from 'react';
 interface PropsType { children: React.ReactElement };
 

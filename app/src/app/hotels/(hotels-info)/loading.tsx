@@ -1,5 +1,5 @@
-import HotelCardSkeleton from '@/app/src/components/Skeleton/Hotel-Card-Skeleton';
-import newArr from '@/app/src/utilities/new-arr';
+import HotelCardSkeleton from '../../../components/Skeleton/Hotel-Card-Skeleton';
+import newArr from '../../../utilities/new-arr';
 import React from 'react';
 
 export default function Loading() {

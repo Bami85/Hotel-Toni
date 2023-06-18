@@ -26,7 +26,7 @@ export default function Navbar({
 
                     {/* Brand logo */ }
                     <div className={ `w-[150px] ${logoColor}` }>
-                        <Link href={ `/` } > <img className={ `w-full` } src="https://svgshare.com/i/svM.svg" alt="Brand-Logo" /> </Link>
+                        {/* <Link href={ `/` } > <img className={ `w-full` } src="/images/logo.png" alt="Brand-Logo" /> </Link> */}
                     </div>
 
                     {/* nav container */ }

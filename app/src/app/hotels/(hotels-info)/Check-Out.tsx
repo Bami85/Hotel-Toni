@@ -1,5 +1,5 @@
 'use client'
-import Calender from '@/app/src/components/Calender/Calender';
+import Calender from '../../../components/Calender/Calender';
 import React from 'react';
 import { format, addDays, addMonths, } from 'date-fns';
 

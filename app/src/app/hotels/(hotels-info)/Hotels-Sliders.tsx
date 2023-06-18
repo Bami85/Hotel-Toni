@@ -7,6 +7,7 @@ import { Navigation } from "swiper";
 import HotelCard from '../../../components/Card/Hotel-Card';
 import continents from '../../../data/world-continents';
 import { HotelsDataType } from '@/app/src/types/Hotel-Data-Type';
+
 interface PropsType {
     hotelsData: HotelsDataType[]
 };
