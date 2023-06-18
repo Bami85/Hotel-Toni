@@ -61,7 +61,7 @@ export default function HotelCard({
         {/* Badge Trending */ }
         <span className={ `absolute top-5 right-2` }>
           <Badge rounded={ `rounded-full pr-4` }>
-            🔥Hot
+ 
           </Badge>
         </span>
 

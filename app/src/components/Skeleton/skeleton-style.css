@@ -1,3 +1,12 @@
-.hotel-card-skleton{
+/* Define the class within the @layer directive */
+@layer utilities {
+    .bg-white-50 {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  
+  /* Apply the modified class */
+  .hotel-card-skleton {
     @apply w-full h-80 bg-white-50 rounded-lg;
-}
+  }
+  
