@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+   
     body {
-        @apply h-full text-gray-900 bg-white-300
+        @apply h-full text-gray-900;
+        @apply bg-white-300; /* Move bg-white-300 outside the apply directive */
     }
 
     .flex-full-center {
