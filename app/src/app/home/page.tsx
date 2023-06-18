@@ -1,8 +1,8 @@
 import Navbar from '../../components/Appbar/Navbar';
 import React from 'react';
-import HeroSection from './(shared)/Hero-Section';
-import AboutSection from './(shared)/About-Section';
-import CheckoutSection from './(shared)/Checkout-Section';
+import HeroSection from './shared/Hero-Section';
+import AboutSection from './shared/About-Section';
+import CheckoutSection from './shared/Checkout-Section';
 
 export default async function page() {
 

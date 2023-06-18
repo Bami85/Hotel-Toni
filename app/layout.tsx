@@ -2,9 +2,9 @@ import './globals.css'
 import {Nunito} from "next/font/google"
 import Navbar from './src/components/Appbar/Navbar';
 import React from 'react';
-import HeroSection from './src/app/(home)/(shared)/Hero-Section';
-import AboutSection from './src/app/(home)/(shared)/About-Section';
-import CheckoutSection from './src/app/(home)/(shared)/Checkout-Section';
+import HeroSection from './src/app/home/shared/Hero-Section';
+import AboutSection from './src/app/home/shared/About-Section';
+import CheckoutSection from './src/app/home/shared/Checkout-Section';
 
 
 export const metadata = {
