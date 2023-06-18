@@ -30,14 +30,7 @@
     @import url('../components/Skeleton/skeleton-style.css');
     @import url('../components/ListBox/list-box-template.module.css');
     @import url('../app/hotels/hotels-info/style.module.css');
+
+    
 }
 
-@layer utilities {
-    .container {
-        @apply px-2 sm:px-2.5 md:px-5 mx-auto
-    }
-
-    .hide-scrollbar::-webkit-scrollbar {
-        @apply hidden
-    }
-}
