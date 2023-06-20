@@ -10,7 +10,7 @@ export default function AboutSection() {
             </div>
             <div className={ `mr-auto md:mx-auto` }>
 
-                <h4 className={ `text-2xl my-5 uppercase font-medium` }>Rreth Nesh </h4>
+                <h4 className={ `text-2xl my-5 uppercase font-medium` }>Informacion Rreth Nesh </h4>
 
                 <h1 className={ `text-4xl my-5 leading-[45px] font-semibold` }>Pushimet më të mira fillojnë këtu te Hotel Toni!
                 </h1>
