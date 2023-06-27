@@ -13,11 +13,11 @@ export const SliderData = [
     },
     {
       image:
-        'https://images.unsplash.com/photo-1484591974057-265bb767ef71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+        'https://cf.bstatic.com/xdata/images/hotel/max1024x768/211722860.jpg?k=25f9f98d0bd9e861986ecf0b4a5bc9a1373e49b62d7240c56837e9e8944e2049&o=&hp=1',
     },
     {
       image:
-        'https://images.unsplash.com/photo-1545917992-dea2d782ef46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2489&q=80',
+        'https://cf.bstatic.com/xdata/images/hotel/max1024x768/211722854.jpg?k=bbc82e2ebb551ef06484bdb5226811c493058461544105465cc924a5ec54cc89&o=&hp=1',
     },
   ];
   

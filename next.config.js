@@ -10,6 +10,7 @@ module.exports = {
       'images.squarespace-cdn.com',
       'upload.wikimedia.org',
       'images.alltrails.com',
+      'cf.bstatic.com',
      
    
   
