@@ -5,7 +5,7 @@ import Portfolio from '../components/Portfolio'
 const work = () => {
   return (
     <div>
-        <Hero heading='Restaurant comming soon' message='Kto jan disa nga ushqimet qe mund te porosisni ne restorant poshte nesh..' />
+        <Hero heading='Restaurant comming soon' message='Kto jan disa nga ushqimet qe mund te porosisni ne restorant Noeli' />
         <Portfolio />
     </div>
   )
