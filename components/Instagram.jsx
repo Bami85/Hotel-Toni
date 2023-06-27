@@ -1,11 +1,10 @@
 import React from 'react'
-import IgImg1 from '../public/ig-img-1.jpeg';
-import IgImg2 from '../public/ig-img-2.jpeg';
-import IgImg3 from '../public/ig-img-3.jpeg';
-import IgImg4 from '../public/ig-img-4.jpeg';
-import IgImg5 from '../public/ig-img-5.jpeg';
-import IgImg6 from '../public/ig-img-6.jpeg';
-import placeholder  from '../public/placeholder.jpg';
+import Logo from '../public/logo.png';
+import Room from '../public/room.jpeg';
+import Ballore from '../public/ballore.jpeg';
+import Ballkon from '../public/ballkon.jpeg';
+import Korridor from '../public/korridor.jpeg';
+
 import InstagramImg from './InstagramImg';
 
 
@@ -15,13 +14,17 @@ const Instagram = () => {
         <p className='text-2xl font-bold'>Na ndiq ne Instagram</p>
         <p className='pb-4'>@Toni</p>
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 p-4'>
-            <InstagramImg socialImg={IgImg1} />
-            <InstagramImg socialImg={IgImg2} />
+            <InstagramImg socialImg={Logo} />
+            <InstagramImg socialImg={Room} />
+            <InstagramImg socialImg={Ballore} />
+            <InstagramImg socialImg={Ballkon} />
+            <InstagramImg socialImg={Korridor} />
+            {/* <InstagramImg socialImg={IgImg2} />
             <InstagramImg socialImg={IgImg3} />
             <InstagramImg socialImg={IgImg4} />
             <InstagramImg socialImg={IgImg5} />
             <InstagramImg socialImg={IgImg6} />
-       
+        */}
         </div>
     </div>
   )
