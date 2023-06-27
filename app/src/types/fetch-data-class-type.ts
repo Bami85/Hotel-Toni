@@ -1,1 +1,0 @@
-export type cacheType = 'default' | 'force-cache' | 'no-cache' | 'no-store' | 'only-if-cached' | 'reload'
