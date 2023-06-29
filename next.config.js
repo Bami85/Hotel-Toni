@@ -11,6 +11,8 @@ module.exports = {
       'upload.wikimedia.org',
       'images.alltrails.com',
       'cf.bstatic.com',
+      'player.vimeo.com',
+      'encrypted-tbn0.gstatic.com'
      
    
   
