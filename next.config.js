@@ -18,6 +18,11 @@ module.exports = {
       'encrypted-tbn0.gstatic.com',
       'photos.wikimapia.org',
       'nationalparks-15bc7.kxcdn.com',
+      'media.istockphoto.com',
+      'st5.depositphotos.com',
+      'www.visitsaranda.net',
+      'media.travelbay.pl',
+      'teatours.al',
     
      
    
