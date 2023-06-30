@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+
 const Contact = () => {
   return (
     <div className='max-w-[1240px] m-auto p-4 h-screen'>
@@ -13,6 +15,7 @@ const Contact = () => {
             <textarea className='border shadow-lg p-3 w-full' cols="30" rows="10" placeholder='Message'></textarea>
             <button className='border shadow-lg p-3 w-full mt-2'>Submit</button>
         </form>
+    
     </div>
   )
 }

@@ -5,6 +5,8 @@ import Instagram from '../components/Instagram';
 import Slider from '../components/Slider';
 import { SliderData } from '../components/SliderData';
 
+
+
 export default function Home() {
   return (
     <div>
@@ -13,9 +15,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Hero heading='Welcome to Llogora - Albania' message='Pushimet më të mira fillojnë këtu te Hotel Toni!' />
+      <Hero heading='Welcome to Llogora - Albania' message='Pushimet më të mira fillojnë këtu te Hotel Toni!' 
+      />
       <Slider slides={SliderData} />
       <Instagram />
+
     </div>
   );
 }

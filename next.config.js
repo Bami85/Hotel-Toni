@@ -4,6 +4,9 @@ const nextConfig = {
 }
 
 module.exports = {
+  env: {
+    GOOGLE_MAPS_API_KEY: 'AIzaSyDv62JMRs70J9-wjo6oKVl1OOtNMQhhOnw',
+  },
   images: {
     domains: [
       'images.unsplash.com',
@@ -11,14 +14,21 @@ module.exports = {
       'upload.wikimedia.org',
       'images.alltrails.com',
       'cf.bstatic.com',
-      'player.vimeo.com',
-      'encrypted-tbn0.gstatic.com'
+      'i0.wp.com/buildandboardtravel.com',
+      'encrypted-tbn0.gstatic.com',
+      'photos.wikimapia.org',
+      'nationalparks-15bc7.kxcdn.com',
+    
      
    
   
     ]
+    
   }
+  
 }
+
+
 
 
 
