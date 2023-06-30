@@ -6,7 +6,7 @@ import Hero from '../components/Hero'
 const contact = () => {
   return (
     <div>
-        <Hero heading='Contact' message='Submit the form below for more work and quotes.' />
+        <Hero heading='' message='PER ME SHUME INFORMACIONE NA KOMNTAKTONI NE NUMRIN E TELEFONIT OSE NA SHKRUAJ NE FORMULARIN ME POSHTE' />
         <Contact />
         {/* <MapComponent/> */}
     </div>
