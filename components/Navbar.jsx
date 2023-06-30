@@ -43,6 +43,9 @@ const Navbar = () => {
             <Link href='/#gallery'>Aktivitete</Link>
           </li>
           <li className='p-4'>
+            <Link href='/rooms'>Dhoma</Link>
+          </li>
+          <li className='p-4'>
             <Link href='/work'>Restorante</Link>
           </li>
           <li className='p-4'>
@@ -71,7 +74,10 @@ const Navbar = () => {
               <Link href='/'>Rreth Nesh</Link>
             </li>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/#gallery'>Akomodimi</Link>
+              <Link href='/#gallery'>Aktivitete</Link>
+            </li>
+            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+              <Link href='/rooms'>Dhoma</Link>
             </li>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/work'>Restorante</Link>
@@ -79,6 +85,7 @@ const Navbar = () => {
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/contact'>Kontakte</Link>
             </li>
+            
           </ul>
         </div>
       </div>
