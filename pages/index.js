@@ -12,8 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero
-        heading="Welcome to Llogora - Albania"
-        message="Pushimet më të mira fillojnë këtu te Hotel Toni!"
+        heading="MIRESEVINI TE HOTEL TONI LLOGORA"
+        message="Pushimet më të mira fillojnë këtu te Hotel Toni, aty ku mali perqafon detin."
       />
     </div>
   )
