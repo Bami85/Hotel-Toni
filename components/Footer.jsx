@@ -72,12 +72,12 @@ const navigation = {
   
   export default function Example() {
     return (
-      <footer className="bg-gray-900" aria-labelledby="footer-heading">
+      <footer className="bg-gray-700" aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
-        <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-          <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+        <div className="m-auto max-w-2sm px-3 pb-8 pt-12 sm:pt-12 sm:px-8 lg:pt-12">
+          <div className="xl:grid sm:grid-cols-3 sm:gap-8">
             <div className="space-y-8">
               {/* <img
                 className="h-7"
