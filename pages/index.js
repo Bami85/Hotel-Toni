@@ -18,8 +18,8 @@ export default function Home() {
       </Head>
       <Hero heading='Welcome to Llogora - Albania' message='Pushimet më të mira fillojnë këtu te Hotel Toni!' 
       />
-      <Slider slides={SliderData} />
-      <Footer/>
+      {/* <Slider slides={SliderData} /> */}
+      {/* <Footer/> */}
       {/* <Instagram /> */}
 
     </div>
