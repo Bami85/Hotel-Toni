@@ -33,7 +33,7 @@ const navigation = {
         ),
       },
       {
-        name: 'Instagram',
+        name: 'Offers',
         href: '#',
         icon: (props) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>

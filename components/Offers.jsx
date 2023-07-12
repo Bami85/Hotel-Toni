@@ -1,3 +1,4 @@
+import { useState } from 'react';
 
 const people = [
   {
@@ -16,7 +17,7 @@ const people = [
 
   },
   {
-    name: 'Dhome me krevat dopio + ballkon + tv',
+    name: 'Dhome + ballkon + tv',
     role: 'Dhome cift me pamje nga Lindja',
     imageUrl:
       'https://cf.bstatic.com/xdata/images/hotel/max1024x768/211722877.jpg?k=b31191fcd8015f96eb3034c19ee6b9ab48386c1ec80298a2ad535de4ae56abb0&o=&hp=1',
@@ -46,6 +47,13 @@ const people = [
 ]
 
 export default function Dhomat() {
+  const [reservation, setReservation] = useState('');
+
+ const reservo = (personName)=> {
+  setReservation(`Reservation for ${personName} successful!`);
+  }
+
+
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -58,6 +66,12 @@ export default function Dhomat() {
               <img className="aspect-[3/2] w-full rounded-2xl object-cover" src={person.imageUrl} alt="" />
               <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{person.name}</h3>
               <p className="text-base leading-7 text-gray-600">{person.role}</p>
+              <button
+              type="button"
+              className="rounded bg-black/10 px-2 py-1 text-sm font-semibold text-black shadow-sm hover:bg-white/20"
+
+               onClick ={() => reservo(person.name)}>Prenoto</button>
+                <p>{reservation}</p>
               
             </li>
           ))}
