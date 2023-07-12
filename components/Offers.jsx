@@ -1,8 +1,9 @@
 import { useState } from 'react';
 
+
 const people = [
   {
-    name: 'Hotel Toni Kontakt ',
+    name: 'Hotel Toni ',
     role: 'Miresevini ',
     imageUrl:
       'https://cf.bstatic.com/xdata/images/hotel/max1024x768/211722837.jpg?k=67f6c703967e2337b473a0a1a465f7d3e3f8816ec087050cd2cf5bdc3f1d4f1a&o=&hp=1',
@@ -50,7 +51,7 @@ export default function Dhomat() {
   const [reservation, setReservation] = useState('');
 
  const reservo = (personName)=> {
-  setReservation(`Reservation for ${personName} successful!`);
+  setReservation(`Reservation per ${personName} u krijua me sukses!`);
   }
 
 
@@ -70,7 +71,7 @@ export default function Dhomat() {
               type="button"
               className="rounded bg-black/10 px-2 py-1 text-sm font-semibold text-black shadow-sm hover:bg-white/20"
 
-               onClick ={() => reservo(person.name)}>Prenoto</button>
+               onClick ={() => reservo(person.name)}>Rezervo</button>
                 <p>{reservation}</p>
               
             </li>
