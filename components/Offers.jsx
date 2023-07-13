@@ -4,10 +4,9 @@ import { useState } from 'react';
 const people = [
   {
     name: 'Hotel Toni ',
-    role: 'Miresevini ',
+    role: 'Miresevini ne Llogora ',
     imageUrl:
       'https://cf.bstatic.com/xdata/images/hotel/max1024x768/211722837.jpg?k=67f6c703967e2337b473a0a1a465f7d3e3f8816ec087050cd2cf5bdc3f1d4f1a&o=&hp=1',
-
   },
 
   {
