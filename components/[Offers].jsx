@@ -87,6 +87,7 @@ import { useEffect, useState } from 'react';
 
 export default function Dhomat() {
   const [rooms, setRooms] = useState([]);
+  const [reservation, setReservation] = useState('');
 
   const fetchDataHandler = async (url, state) => {
     const response = await fetch(url);
@@ -100,10 +101,10 @@ export default function Dhomat() {
 
   console.log(rooms);
 
-  const reservo = (personName) => {
+  const reservo = (rooms) => {
     // Make a reservation in MongoDB and update the number of rooms
     // ... Your reservation logic goes here ...
-    setReservation(`Reservation for ${personName} created successfully!`);
+    setReservation(`Reservation for ${rooms} created successfully!`);
   };
 
   return (
@@ -124,7 +125,7 @@ export default function Dhomat() {
                   alt=""
                 />
                 <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
-                  {room.guestName}
+                  {room.description}
                 </h3>
                 <p className="text-base leading-7 text-gray-600">
                   {room.price}
