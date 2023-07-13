@@ -5,6 +5,7 @@ const ReservationForm = ({ roomId, onReservationConfirmed }) => {
     name: '',
     email: '',
     phone: '',
+    date: '',
   });
 
   const handleInputChange = (e) => {
@@ -15,14 +16,8 @@ const ReservationForm = ({ roomId, onReservationConfirmed }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate reservationData and make reservation in MongoDB
-    // ... Your reservation logic goes here ...
-
     // Call the onReservationConfirmed function passed from the parent component
-    onReservationConfirmed(roomId);
-
-    // Reset form
-    setReservationData({ name: '', email: '', phone: '' });
+    onReservationConfirmed(reservationData);
   };
 
   return (
@@ -64,6 +59,19 @@ const ReservationForm = ({ roomId, onReservationConfirmed }) => {
             id="phone"
             name="phone"
             value={reservationData.phone}
+            onChange={handleInputChange}
+            className="rounded border-gray-300 px-3 py-2"
+          />
+        </div>
+        <div className="flex flex-col mb-4">
+          <label htmlFor="date" className="mb-1">
+            Select Date:
+          </label>
+          <input
+            type="date"
+            id="date"
+            name="date"
+            value={reservationData.date}
             onChange={handleInputChange}
             className="rounded border-gray-300 px-3 py-2"
           />
