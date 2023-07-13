@@ -83,11 +83,84 @@
 
 
 
+// import { useEffect, useState } from 'react';
+
+// export default function Dhomat() {
+//   const [rooms, setRooms] = useState([]);
+//   const [reservation, setReservation] = useState('');
+
+//   const fetchDataHandler = async (url, state) => {
+//     const response = await fetch(url);
+//     const data = await response.json();
+//     state(data.data);
+//   };
+
+//   useEffect(() => {
+//     fetchDataHandler('/api/rooms', setRooms);
+//   }, []);
+
+//   console.log(rooms);
+
+//   const reservo = (rooms) => {
+//     // Make a reservation in MongoDB and update the number of rooms
+//     // ... Your reservation logic goes here ...
+//     setReservation(`Reservation for ${rooms} created successfully!`);
+//   };
+
+//   return (
+//     <>
+//     <div className="bg-white py-24 sm:py-32">
+//       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+//         <ul
+//           role="list"
+//           className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+//         >
+//           {rooms &&
+//             rooms.map((room) => (
+//               <li key={room._id}>
+//                 {/* Render room details */}
+//                 <img
+//                   className="aspect-[3/2] w-full rounded-2xl object-cover"
+//                   src={room.imageUrl}
+//                   alt=""
+//                 />
+//                 <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
+//                   {room.description}
+//                 </h3>
+//                 <p className="text-base leading-7 text-gray-600">
+//                   {room.price}
+//                 </p>
+                
+//                 <button
+//                   type="button"
+//                   className="rounded bg-black/10 px-2 py-1 text-sm font-semibold text-black shadow-sm hover:bg-white/20"
+//                   onClick={() => reservo(room.price)}
+//                 >
+//                   Rezervo
+//                 </button>
+//               </li>
+//             ))}
+//         </ul>
+//       </div>
+      
+//     </div>
+
+    
+//     </>
+
+    
+//   );
+// }
+
+
 import { useEffect, useState } from 'react';
+import ReservationForm from './ReservationForm';
+import Link from 'next/link';
 
 export default function Dhomat() {
   const [rooms, setRooms] = useState([]);
   const [reservation, setReservation] = useState('');
+  const [selectedRoomId, setSelectedRoomId] = useState(null);
 
   const fetchDataHandler = async (url, state) => {
     const response = await fetch(url);
@@ -101,53 +174,46 @@ export default function Dhomat() {
 
   console.log(rooms);
 
-  const reservo = (rooms) => {
-    // Make a reservation in MongoDB and update the number of rooms
-    // ... Your reservation logic goes here ...
-    setReservation(`Reservation for ${rooms} created successfully!`);
+  const makeReservation = (roomId) => {
+    setSelectedRoomId(roomId);
+  };
+
+  const handleReservationConfirmed = (roomId) => {
+    setReservation(`Reservation for room ${roomId} created successfully!`);
+    setSelectedRoomId(null);
   };
 
   return (
     <>
-    <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <ul
-          role="list"
-          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
-        >
-          {rooms &&
-            rooms.map((room) => (
-              <li key={room._id}>
-                {/* Render room details */}
-                <img
-                  className="aspect-[3/2] w-full rounded-2xl object-cover"
-                  src={room.imageUrl}
-                  alt=""
-                />
-                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
-                  {room.description}
-                </h3>
-                <p className="text-base leading-7 text-gray-600">
-                  {room.price}
-                </p>
-                
-                <button
-                  type="button"
-                  className="rounded bg-black/10 px-2 py-1 text-sm font-semibold text-black shadow-sm hover:bg-white/20"
-                  onClick={() => reservo(room.price)}
-                >
-                  Rezervo
-                </button>
-              </li>
-            ))}
-        </ul>
+      <div className="bg-white py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <ul
+            role="list"
+            className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+          >
+            {rooms &&
+              rooms.map((room) => (
+                <li key={room._id}>
+                  {/* Render room details */}
+                  <img className="aspect-[3/2] w-full rounded-2xl object-cover" src={room.imageUrl} alt="" />
+                  <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{room.description}</h3>
+                  <p className="text-base leading-7 text-gray-600">{room.price}</p>
+                  <button
+                    type="button"
+                    className="rounded bg-black/10 px-2 py-1 text-sm font-semibold text-black shadow-sm hover:bg-white/20"
+                    onClick={() => makeReservation(room._id)}
+                  >
+                    Rezervo
+                  </button>
+                </li>
+              ))}
+          </ul>
+
+          {selectedRoomId && <ReservationForm roomId={selectedRoomId} onReservationConfirmed={handleReservationConfirmed} />}
+
+          {reservation && <p className="mt-8">{reservation}</p>}
+        </div>
       </div>
-      
-    </div>
-
-    
     </>
-
-    
   );
 }
