@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ReservationForm from './ReservationForm';
+import Link from 'next/link';
 
 export default function Dhomat() {
   const [rooms, setRooms] = useState([]);
@@ -24,28 +25,32 @@ export default function Dhomat() {
   console.log(rooms);
   console.log(reservations);
 
-  const makeReservation = (description) => {
-    setSelectedRoomId(description);
+  const makeReservation = (roomId) => {
+    setSelectedRoomId(roomId);
   };
-
-  const handleReservationConfirmed = (reservationData) => {
-    const { description, date } = reservationData;
-
-    // Check if the room is already reserved for the selected date
+  
+  const handleReservationConfirmed = (reservationData, roomId) => {
+    const { startDate, endDate } = reservationData;
+  
+    // Check if the room is already reserved for any date in the selected range
     const isRoomReserved = reservations.some(
-      (reservation) => reservation.description === description && reservation.date === date
+      (reservation) =>
+        reservation.roomId === roomId &&
+        ((reservation.startDate <= startDate && startDate <= reservation.endDate) ||
+          (reservation.startDate <= endDate && endDate <= reservation.endDate))
     );
-
+  
     if (isRoomReserved) {
-      setReservation(`This room is already reserved for the selected date.`);
+      setReservation(`This room is already reserved for the selected date range.`);
     } else {
       // Make the reservation and update the reservations list
       const newReservation = {
-        description,
-        date,
+        roomId,
+        startDate,
+        endDate,
       };
       setReservations([...reservations, newReservation]);
-      setReservation(`Reservation for room on ${date} created successfully!`);
+      setReservation(`Reservation for room ${roomId} from ${startDate} to ${endDate} created successfully!`);
       setSelectedRoomId(null);
     }
   };
@@ -65,20 +70,21 @@ export default function Dhomat() {
                   <img className="aspect-[3/2] w-full rounded-2xl object-cover" src={room.imageUrl} alt="" />
                   <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{room.description}</h3>
                   <p className="text-base leading-7 text-gray-600">{room.price}</p>
-
-                  <button
-                    type="button"
-                    className="rounded bg-black/10 px-2 py-1 text-sm font-semibold text-black shadow-sm hover:bg-white/20"
-                    onClick={() => makeReservation(room._id)}
-                  >
-                    Rezervo
-                  </button>
+                  <Link href = "/reservationForm">
+                    <button
+                      type="button"
+                      className="rounded bg-black/10 px-2 py-1 text-sm font-semibold text-black shadow-sm hover:bg-white/20"
+                      onClick={() => makeReservation(room._id)}
+                    >
+                      Rezervo
+                    </button>
+                  </Link>
                 </li>
               ))}
           </ul>
 
           {selectedRoomId && (
-            <ReservationForm roomId={selectedRoomId} onReservationConfirmed={handleReservationConfirmed} />
+            <ReservationForm roomId={selectedRoomId} onReservationConfirmed={(reservationData) => handleReservationConfirmed(reservationData, selectedRoomId)} />
           )}
 
           {reservation && <p className="mt-8">{reservation}</p>}
