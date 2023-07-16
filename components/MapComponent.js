@@ -1,22 +1,27 @@
-import React from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import React from 'react'
+import { GoogleMap, LoadScript } from '@react-google-maps/api'
 
-class MapContainer extends React.Component {
-  render() {
-    return (
-      <Map
-        google={this.props.google}
-        zoom={14}
-        initialCenter={{
-          lat: 37.7749, // Latitudine del centro iniziale
-          lng: -122.4194 // Longitudine del centro iniziale
-        }}
-      />
-    );
+const MapComponent = () => {
+  const mapStyles = {
+    height: '300px',
+    width: '80%',
+    borderRadius: '0px',
   }
+
+  const center = {
+    lat: 40.2165367,
+    lng: 19.5795544,
+  }
+
+  return (
+    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <LoadScript googleMapsApiKey="AIzaSyBaPcIU0NIkQfHvOetcD8CPhMKsrfrxtLg">
+        <GoogleMap mapContainerStyle={mapStyles} center={center} zoom={13}>
+     
+        </GoogleMap>
+      </LoadScript>
+    </div>
+  )
 }
 
-export default GoogleApiWrapper({
-  apiKey: 'AIzaSyDv62JMRs70J9-wjo6oKVl1OOtNMQhhOnw' 
-})(MapContainer);
-
+export default MapComponent

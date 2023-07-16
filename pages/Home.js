@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Hero from '../components/Hero'
-// import Instagram from '../components/Offers';
+import Head from 'next/head';
+import Image from 'next/image';
+import Hero from '../components/Hero';
+import MapComponent from '../components/MapComponent';
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
         heading="MIRESEVINI"
         message="Pushimet më të mira fillojnë ne Hotel Toni, aty ku mali perqafon detin."
       />
+      <MapComponent />
     </div>
-  )
+  );
 }
