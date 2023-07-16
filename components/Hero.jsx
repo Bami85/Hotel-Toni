@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
+
 const Hero = ({ heading, message }) => {
   return (
     <>
@@ -12,12 +13,8 @@ const Hero = ({ heading, message }) => {
       <p className='py-5 text-xl'>{message} </p>
       <Link href="/reservationForm"> 
          <button className='px-8 py-2 border'> Prenoto tani Online</button>
+        
       </Link>
-
-      <Link href=""> 
-         <button className="px-8 py-2 leading-7 text-white-600"> Telefon 00355-694396419 </button>
-      </Link>
-      
     </div>
     
   </div>
