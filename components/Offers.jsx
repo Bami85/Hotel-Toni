@@ -93,6 +93,8 @@
 //     </>
 //   );
 // }
+// }
+// }
 import { useEffect, useState } from 'react';
 import ReservationForm from './ReservationForm';
 import Link from 'next/link';
@@ -184,4 +186,3 @@ export default function Dhomat() {
     </>
   );
 }
-

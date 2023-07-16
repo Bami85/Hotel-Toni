@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from '../components/Hero'
 import Portfolio from '../components/Portfolio'
-import Offers from '../components/[Offers]'
+import Offers from '../components/Offers'
 
 const Rooms = () => {
   return (

@@ -1,22 +1,20 @@
 import React from 'react'
-// import Booking from '../components/Bookning'
- import ReservationForm from '../components/ReservationForm'
-import Offers from '../components/[Offers]'
+import ReservationForm from '../components/ReservationForm'
+import Offers from '../components/Offers'
 import Hero from '../components/Hero'
-// import MapComponent from '../components/MapComponent'
 
-const reservationForm = () => {
+const reservationForm = ({ selectedRoomId, handleReservationConfirmed }) => {
   return (
     <div>
-       {/* <ReservationForm  heading='REZERVO TANI' message=''  /> */}
-       <Hero  heading='REZERVO TANI' message=''  />
-        <Offers  heading='REZERVO TANI' message=''  />
-        
-        {/* <MapComponent/> */}
+      {/* <ReservationForm  heading='REZERVO TANI' Offers = {Offers}/> */}
+
+      <Offers
+        roomId={selectedRoomId}
+        onReservationConfirmed={handleReservationConfirmed}
+        ReservationForm={ReservationForm}
+      />
     </div>
   )
 }
 
-export default reservationForm 
-
-
+export default reservationForm
