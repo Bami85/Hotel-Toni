@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 
 const contact = () => {
   const handleWhatsAppBooking = () => {
-    const phoneNumber = '046736270328'; 
+    const phoneNumber = '046765876515'; 
     const message = 'Dua te reservoj ne Hotel Toni'; // Replace with your desired message
 
     const encodedMessage = encodeURIComponent(message);
