@@ -75,16 +75,16 @@ const Navbar = () => {
               <Link href='/'>Rreth Nesh</Link>
             </li>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/aktivitete'>Aktivitete</Link>
-            </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/rooms'>Dhoma</Link>
-            </li>
+            </li> 
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/work'>Restorante</Link>
             </li>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/contact'>Kontakte</Link>
+              <Link href='/aktivitete'>Aktivitete</Link>
+            </li>
+            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+              <Link href='/contact'>Adresa</Link>
             </li>
             
           </ul>
