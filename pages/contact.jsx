@@ -21,7 +21,7 @@ import Hero from '../components/Hero';
 
 const contact = () => {
   const handleWhatsAppBooking = () => {
-    const phoneNumber = '0765876515'; // Replace with your WhatsApp phone number
+    const phoneNumber = '046765876515'; // Replace with your WhatsApp phone number
     const message = 'I would like to make a booking.'; // Replace with your desired message
 
     const encodedMessage = encodeURIComponent(message);
