@@ -23,7 +23,8 @@ module.exports = {
       'www.visitsaranda.net',
       'media.travelbay.pl',
       'teatours.al',
-      'googleusercontent.com'
+      'googleusercontent.com',
+      'player.vimeo.com'
     
      
    

@@ -19,9 +19,7 @@ export default function Dhomat() {
     fetchDataHandler('/api/rooms', setRooms);
   }, []);
 
-  useEffect(() => {
-    fetchDataHandler('/api/reservations', setReservations);
-  }, []);
+
 
   const makeReservation = (roomId) => {
     setSelectedRoomId(roomId);
@@ -90,3 +88,6 @@ export default function Dhomat() {
     </>
   )
 }
+
+
+

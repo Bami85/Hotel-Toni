@@ -13,6 +13,7 @@
     "@heroicons/react": "^2.0.18",
     "@react-google-maps/api": "^2.18.1",
     "@types/react-star-rating-component": "^1.4.1",
+    "emailjs": "^4.0.2",
     "google-maps-react": "^2.0.6",
     "heroicons": "^2.0.18",
     "i": "^0.3.7",
