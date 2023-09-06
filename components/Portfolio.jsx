@@ -62,7 +62,6 @@ export default function Votat() {
                       {vote.name} <br/> {vote.country}
                     </a>
                   </p>
-                  
                  
                 </div>
               </div>

@@ -52,6 +52,9 @@ const Navbar = () => {
           <li className='p-4'>
             <Link href='/contact'>Adresa</Link>
           </li>
+          <li className='p-4'>
+            <Link href='/votat'>Votat ne bookning</Link>
+          </li>
         </ul>
 
         {/* Mobile Button */}
@@ -86,7 +89,9 @@ const Navbar = () => {
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/contact'>Adresa</Link>
             </li>
-            
+            <li className='p-4'>
+            <Link href='/votat'>Votat ne bookning</Link>
+          </li>
           </ul>
         </div>
       </div>
