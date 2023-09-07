@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 export default function Votat() {
   const [votes, setVotes] = useState([]);
 
@@ -22,6 +23,10 @@ export default function Votat() {
     fetchDataHandler();
 
   }, []); 
+  const addReview = (newReview) => {
+    setVotes([...votes, newReview]);
+  };
+
   return (
     <>
     {/* /tailwindcss */}
@@ -32,15 +37,9 @@ export default function Votat() {
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {votes.map((vote) => (
-            <article key={vote.id} className="flex max-w-xl flex-col items-start justify-between">
+            <article key={vote._id} className="flex max-w-xl flex-col items-start justify-between">
                  <div className="group relative">
-                {/* <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                  <a href={vote.href}>
-                    <span className="absolute inset-0" />
-                    {vote.name}
-                  </a>
-                </h3> */}
-                
+
               </div>
               <div className="flex items-center gap-x-4 text-xs">
                 <time dateTime={vote.data} className="text-gray-500">
@@ -73,5 +72,8 @@ export default function Votat() {
     </>
   );
 }
+
+
+
 
 
