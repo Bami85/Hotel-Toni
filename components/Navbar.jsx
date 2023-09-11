@@ -40,14 +40,14 @@ const Navbar = () => {
             <Link href='/'>Rreth Nesh</Link>
           </li> 
           <li className='p-4'>
-            <Link href='/rooms'>Dhoma</Link>
+            <Link href='/rooms'>Akomodimi</Link>
           </li>
           <li className='p-4'>
             <Link href='/work'>Restorant</Link>
           </li>
-          <li className='p-4'>
+          {/* <li className='p-4'>
             <Link href='/aktivitete'>Aktivitete</Link>
-          </li>
+          </li> */}
          
           <li className='p-4'>
             <Link href='/contact'>Adresa</Link>
@@ -78,14 +78,14 @@ const Navbar = () => {
               <Link href='/'>Rreth Nesh</Link>
             </li>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/rooms'>Dhoma</Link>
+              <Link href='/rooms'>Akomodimi</Link>
             </li> 
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/work'>Restorante</Link>
             </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+            {/* <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/aktivitete'>Aktivitete</Link>
-            </li>
+            </li> */}
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/contact'>Adresa</Link>
             </li>
