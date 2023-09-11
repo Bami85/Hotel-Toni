@@ -1,24 +1,12 @@
 import React ,{useState, useEffect} from 'react'
 import Portfolio from '../components/Portfolio'
 import Hero from '../components/Hero'
-import { VoiceListInstance } from 'twilio/lib/rest/pricing/v1/voice';
-import HostedNumbers from 'twilio/lib/rest/preview/HostedNumbers';
-
-
 
 
 export default function Votat() {
   const [votes, setVotes] = useState([]);
-  const [rate, setRate] = useState()
 
-  const addRate =()=>{
-    setRate([
-      ...rate,
-      {
-        name:ali,
-      }
-    ])
-  }
+  
   useEffect(() => {
     const fetchDataHandler = async () => {
       try {
@@ -76,7 +64,7 @@ export default function Votat() {
               </div>
             </article>
           ))}
-          <button className="btn btn-primary" onClick={addRate}>button</button>
+  
    </div>
     </>
   )
