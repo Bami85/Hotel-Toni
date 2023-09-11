@@ -70,7 +70,7 @@ const navigation = {
     ],
   }
   
-  export default function Example() {
+  export default function Footer() {
     return (
       <footer className="bg-gray-700" aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
@@ -84,9 +84,6 @@ const navigation = {
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                 alt="Company name"
               /> */}
-              <p className="text-sm text-center leading-6 text-gray-300">
-                Bejm pushimet tuaja te pa harrueshme 
-              </p>
               <div className="flex space-x-6 ">
                 {navigation.social.map((item) => (
                   <a key={item.name} href={item.href} className="text-gray-500 hover:text-gray-400 ">
