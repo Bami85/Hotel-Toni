@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import MapComponent from '../components/MapComponent';
+import Footer from '../components/Footer';
 
 import Hero from '../components/Hero';
 
@@ -16,6 +17,7 @@ const contact = ({message, heading,description}) => {
   };
 
   return (
+    <>
     <div className='flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-video'>
     {/* Overlay */}
     <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/40 z-[2]' />
@@ -34,6 +36,8 @@ const contact = ({message, heading,description}) => {
 
     <div className='p-5 text-white z-[2] mt-[-10rem]'></div>
   </div>
+  <Footer/>
+  </>
   );
 };
 
