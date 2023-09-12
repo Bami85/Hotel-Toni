@@ -42,18 +42,21 @@ const Navbar = () => {
           <li className='p-4'>
             <Link href='/rooms'>Akomodimi</Link>
           </li>
-          <li className='p-4'>
-            <Link href='/work'>Restorant</Link>
-          </li>
           {/* <li className='p-4'>
-            <Link href='/aktivitete'>Aktivitete</Link>
+            <Link href='/work'>Restorant</Link>
+          </li> */}
+          {/* <li className='p-4'>
+            <Link href='/aktivitete'>🇬🇧</Link>
           </li> */}
          
           <li className='p-4'>
-            <Link href='/contact'>Adresa</Link>
+            <Link href='/contact'>Kontakt</Link>
           </li>
           <li className='p-4'>
             <Link href='/votat'>Votat ne bookning</Link>
+          </li>
+          <li className='p-4'>
+            <Link href='/aktivitete'>🇬🇧</Link>
           </li>
         </ul>
 
@@ -87,11 +90,14 @@ const Navbar = () => {
               <Link href='/aktivitete'>Aktivitete</Link>
             </li> */}
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/contact'>Adresa</Link>
+              <Link href='/contact'>Kontakt</Link>
             </li>
             <li className='p-4'>
             <Link href='/votat'>Votat ne bookning</Link>
           </li>
+          <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+              <Link href='/work'>AL</Link>
+            </li>
           </ul>
         </div>
       </div>
