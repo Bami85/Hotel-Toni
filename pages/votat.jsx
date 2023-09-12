@@ -1,6 +1,8 @@
 import React ,{useState, useEffect} from 'react'
 import Portfolio from '../components/Portfolio'
-import Hero from '../components/Hero'
+import Hero from '../components/Hero';
+
+
 
 
 export default function Votat() {
@@ -33,10 +35,13 @@ export default function Votat() {
         <Portfolio heading='Restaurant comming soon' message='Kto jan disa nga ushqimet qe mund te porosisni ne restorant Noeli' />
  
     </div>
-   <div>
+ 
+   
   
   
-   </div>
+
     </>
   )
 }
+
+
