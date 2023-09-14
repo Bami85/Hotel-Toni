@@ -1,4 +1,5 @@
-import React from 'react'
+import { Data } from '@react-google-maps/api';
+import React, { useState, useEffect } from 'react'
 // Components hur de funkar att passa data som props
 
 export default function IndexCommenst (){
@@ -11,12 +12,16 @@ export default function IndexCommenst (){
 }
 
 
-function Commenst ({text, description}){
+function Commenst ({text, completed, description}){
+    const [textState, setTextState] = useState(text);
+    useEffect (()=>{
+        setTextState(`${text} ${new Data()}`);
+
+    },[]);
     return(
-        <div className="mt-6 text-large text-black-500"> 
+        <div className= {completed}> 
             <h1>
                 {text} 
-                {description}
              </h1>
         </div>
     )
