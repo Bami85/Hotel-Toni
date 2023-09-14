@@ -4,6 +4,7 @@ import Hero from '../components/Hero'
 // import Instagram from '../components/Offers';
 import Footer from '../components/Footer'
 
+
 export default function Home() {
   return (
     <>
@@ -27,3 +28,4 @@ export default function Home() {
     </>
   )
 }
+
