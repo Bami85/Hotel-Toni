@@ -7,6 +7,9 @@ import Hero from '../components/Hero';
 
 export default function Votat() {
   const [votes, setVotes] = useState([]);
+  const stars = [4, 5, 3, 5, 5];
+  const finThree = stars.find((star)=>star > 3 )
+  console.log(finThree);
 
   
   useEffect(() => {
@@ -33,7 +36,11 @@ export default function Votat() {
     <div>
         <Hero/>
         <Portfolio heading='Restaurant comming soon' message='Kto jan disa nga ushqimet qe mund te porosisni ne restorant Noeli' />
- 
+
+    </div>
+    <div>
+     <h1>{finThree}</h1>
+      
     </div>
  
    

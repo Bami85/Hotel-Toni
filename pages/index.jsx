@@ -3,9 +3,10 @@ import Image from 'next/image'
 import Hero from '../components/Hero'
 // import Instagram from '../components/Offers';
 import Footer from '../components/Footer'
+import Comments from '../components/Comments'
 
 
-export default function Home() {
+export default function Home({text}) {
   return (
     <>
       <div>
@@ -21,7 +22,8 @@ export default function Home() {
           description ="Jeni i ftuar të përjetoni dhe të shijoni momente të pazakonta në mes te natyres, aty ku mysafirët ndihen si në shtëpi në dhomat ne mes te pishave te Llogorase."
           
         />
-          
+
+          <Comments>{text} </Comments>
       <Footer/>
       </div>
    
