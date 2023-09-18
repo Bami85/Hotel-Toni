@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
-import { XMarkIcon } from '@heroicons/react/20/solid'
 
 function Banner({ text, description }) {
   const [banner, setBanner] = useState(false)
@@ -65,7 +64,7 @@ function Banner({ text, description }) {
   )
 }
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [banner, setBanner] = useState('')
   const [nav, setNav] = useState(false)
   const [color, setColor] = useState('transparent')
@@ -101,9 +100,11 @@ const Navbar = () => {
   return (
     <>
       <div
+        data-theme={props.darkTheme ? "dark":"light"}
         style={{ backgroundColor: `${color}` }}
         className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
       >
+
         <Banner {...AddBanner} />
         <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
           <Link href="/">
