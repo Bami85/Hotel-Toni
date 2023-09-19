@@ -115,10 +115,14 @@ const Navbar = (props) => {
               {/* Hotel TONI */}
             </h1>
           </Link>
+          <li>
+          <Link href="/post/first">First Post</Link>
+        </li>
           <ul style={{ color: `${textColor}` }} className="hidden sm:flex">
             <li className="p-4">
               <Link href="/">Rreth Nesh</Link>
             </li>
+
             <li className="p-4">
               <Link href="/rooms">Akomodimi</Link>
             </li>
