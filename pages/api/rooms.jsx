@@ -14,5 +14,11 @@ export default async function handler(req, res) {
       const posts = await db.collection("Rooms").find({}).toArray();
       res.json({ status: 200, data: posts });
       break;
+      // console.log(req.query.slug)
+      // const str2 = req.query.slug.charAt(0).toUpperCase()+ req.query.slug.slice(1);
+      // const posts = await db.collection("Rooms").find({ name: { "$eq": str2 }}).toArray();
+      // res.json({ status: 200, data: posts });
+     // res.json({ status: 200, data: [hej: "Yaaay"] });
+      // break;
   }
 }
