@@ -97,6 +97,11 @@
   dependencies:
     glob "7.1.7"
 
+"@next/font@^13.4.19":
+  version "13.4.19"
+  resolved "https://registry.yarnpkg.com/@next/font/-/font-13.4.19.tgz#2b69aee760a3bbabf54873f80ae6d4b09b35d133"
+  integrity sha512-yOuSRYfqksWcaG/sATr1/DEGvvI8gnmAAnQCCZ0+L9p4Pio3/DMu71J56YHh9Hz84LDN4tMVzuux0ssCuM50sA==
+
 "@next/swc-android-arm-eabi@12.2.0":
   version "12.2.0"
   resolved "https://registry.yarnpkg.com/@next/swc-android-arm-eabi/-/swc-android-arm-eabi-12.2.0.tgz#f116756e668b267de84b76f068d267a12f18eb22"
@@ -1870,6 +1875,11 @@ next-i18next@^14.0.3:
     core-js "^3"
     hoist-non-react-statics "^3.3.2"
     i18next-fs-backend "^2.1.5"
+
+next-themes@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.2.1.tgz#0c9f128e847979daf6c67f70b38e6b6567856e45"
+  integrity sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==
 
 next@12.2.0:
   version "12.2.0"
