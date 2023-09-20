@@ -116,7 +116,7 @@ const Navbar = (props) => {
             </h1>
           </Link>
           <li>
-          <Link href="/post/first">First Post</Link>
+          <Link href="api/people/1">First Post</Link>
         </li>
           <ul style={{ color: `${textColor}` }} className="hidden sm:flex">
             <li className="p-4">

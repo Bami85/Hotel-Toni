@@ -1,19 +1,28 @@
+import React from 'react'
+import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Image from 'next/image'
 import Hero from '../components/Hero'
 // import Instagram from '../components/Offers';
+import Link from 'next/link'
+import  Person  from '../interfaces'
 import Footer from '../components/Footer'
 import Comments from '../components/Comments'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
+import useSWR from 'swr'
+import PersonComponent from '../components/Person'
+
+const fetcher = (url) => fetch(url).then((res) => res.json())
 
 
 
-
-
-export default function Home({ text }) {
+export default function Home({ text, p }) {
   const router = useRouter()
   const id = router.query.id
+  const { data, error, isLoading } = useSWR('/api/people', fetcher)
+  if (error) return <div>Failed to load</div>
+  if (isLoading) return <div>Loading...</div>
+  if (!data) return null
+ 
   return (
     <>
       <div>
@@ -31,12 +40,20 @@ export default function Home({ text }) {
         />
 
         <Comments>
-        <h1>Dhoma: {id}</h1>
+        {/* <h1>Dhoma: {id}</h1>
           <ul>
             <li>
               <Link href={`/post/${id}/first-comment`}>First comment</Link>
             </li>
-      </ul>
+      </ul> */}
+
+{/* 
+      <ul>
+        {data.map((p) => (
+          <PersonComponent key={p.id} person={p} />
+        ))}
+      </ul> */}
+    
 
       
         </Comments>
