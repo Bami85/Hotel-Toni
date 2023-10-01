@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     
     case "POST":
       let bodyObject = JSON.parse(req.body);
-      let newPost = await db.collection("Votes").insertOne(bodyObject); // Inserimento di un singolo documento
+      let newPost = await db.collection("Votes").insertOne(bodyObject); 
       res.json(newPost.ops[0]);
       break;
     case "GET":
