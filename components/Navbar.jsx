@@ -1,70 +1,16 @@
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
-
-function Banner({ text, description }) {
-  const [banner, setBanner] = useState(false)
-
-  function closeBanner() {
-    setBanner(true)
-  }
-
-  return (
-    <>
-      {/* <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
-        <div
-          className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
-          aria-hidden="true"
-        >
-          <div
-            className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
-            style={{
-              clipPath:
-                'polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)',
-            }}
-          />
-        </div>
-        <div
-          className="absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
-          aria-hidden="true"
-        >
-          <div
-            className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
-            style={{
-              clipPath:
-                'polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)',
-            }}
-          />
-        </div>
-        <p className="text-sm leading-6 text-gray-900">
-          <a href="#">
-            <strong className="font-semibold">{description}</strong>
-            <svg
-              viewBox="0 0 2 2"
-              className="mx-2 inline h-0.5 w-0.5 fill-current"
-              aria-hidden="true"
-            >
-              <circle cx={1} cy={1} r={1} />
-            </svg>
-            {text}&nbsp;<span aria-hidden="true">&rarr;</span>
-          </a>
-        </p>
-        <div className="flex flex-1 justify-end">
-          <button
-            onClick={closeBanner}
-            type="button"
-            className="-m-3 p-3 focus-visible:outline-offset-[-4px]"
-          >
-            <span className={banner ? 'close' : ''}></span>
-            <XMarkIcon className="h-5 w-5 text-gray-900" aria-hidden="true" />
-          </button>
-        </div>
-      </div> */}
-    </>
-  )
-}
+import { useTranslation } from 'react-i18next'
+import i18n from '../pages/ i18n'
 
 const Navbar = (props) => {
+  const { t } = useTranslation()
+
+  const handleLanguageChange = (lng) => {
+    i18n.changeLanguage(lng)
+  }
+
   const [banner, setBanner] = useState('')
   const [nav, setNav] = useState(false)
   const [color, setColor] = useState('transparent')
@@ -100,24 +46,18 @@ const Navbar = (props) => {
   return (
     <>
       <div
-        data-theme={props.darkTheme ? "dark":"light"}
+        data-theme={props.darkTheme ? 'dark' : 'light'}
         style={{ backgroundColor: `${color}` }}
         className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
       >
-
-        <Banner {...AddBanner} />
         <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
           <Link href="/">
             <h1
               style={{ color: `${textColor}` }}
               className="font-bold text-4xl"
-            >
-              {/* Hotel TONI */}
-            </h1>
+            ></h1>
           </Link>
-          <li>
-          <Link href="api/people/1">First Post</Link>
-        </li>
+          <li></li>
           <ul style={{ color: `${textColor}` }} className="hidden sm:flex">
             <li className="p-4">
               <Link href="/">Rreth Nesh</Link>
@@ -131,10 +71,14 @@ const Navbar = (props) => {
               <Link href="/contact">Kontakt</Link>
             </li>
             <li className="p-4">
-              <Link href="/votat">Votat ne bookning</Link>
+              <button onClick={() => handleLanguageChange('en')}>EN</button>
+            
             </li>
+            {/* <li className="p-4">
+              <button onClick={() => handleLanguageChange('fr')}>FR</button>
+            </li> */}
             <li className="p-4">
-              <Link href="/aktivitete">🇬🇧</Link>
+              <button onClick={() => handleLanguageChange('al')}>AL</button>
             </li>
           </ul>
 
@@ -182,14 +126,15 @@ const Navbar = (props) => {
               >
                 <Link href="/contact">Kontakt</Link>
               </li>
+
               <li className="p-4">
-                <Link href="/votat">Votat ne bookning</Link>
+                <button onClick={() => handleLanguageChange('en')}>EN</button>
               </li>
-              <li
-                onClick={handleNav}
-                className="p-4 text-4xl hover:text-gray-500"
-              >
-                <Link href="/work">AL</Link>
+              {/* <li className="p-4">
+              <button onClick={() => handleLanguageChange('fr')}>FR</button>
+              </li> */}
+              <li className="p-4">
+                <button onClick={() => handleLanguageChange('al')}>AL</button>
               </li>
             </ul>
           </div>
