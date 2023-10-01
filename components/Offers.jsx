@@ -15,8 +15,9 @@ export default function Dhomat() {
     state(data.data);
   };
 
+  console.log(rooms)
   useEffect(() => {
-    fetchDataHandler('/api/rooms', setRooms);
+    fetchDataHandler('/api/room', setRooms);
   }, []);
 
 
@@ -88,6 +89,5 @@ export default function Dhomat() {
     </>
   )
 }
-
 
 
