@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import MapComponent from '../components/MapComponent';
 import Footer from '../components/Footer';
-import Contact from '../components/Contact';
+import Bookning from '../components/Bookning';
 
 import Hero from '../components/Hero';
 
@@ -37,7 +37,7 @@ const contact = ({message, heading,description}) => {
 
     <div className='p-5 text-white z-[2] mt-[-10rem]'></div>
   </div>
-  <Contact/>
+  <Bookning/>
   <Footer/>
   </>
   );
