@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
       <Navbar />
       <Component {...pageProps} />
       <I18nextProvider i18n={i18n}/>
-  
+
     </>
   );
 }
