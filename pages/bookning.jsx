@@ -7,8 +7,6 @@ const bookning = () => {
   return (
     <div>
         <Booking heading='REZERVO TANI' message='' />
- 
-        {/* <MapComponent/> */}
     </div>
   )
 }
