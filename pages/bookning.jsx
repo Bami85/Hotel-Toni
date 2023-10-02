@@ -6,7 +6,7 @@ import Hero from '../components/Hero'
 const bookning = () => {
   return (
     <div>
-        <Booking heading='REZERVO TANI' message='' />
+        <Booking heading='REZERVO TANI' message='Zgjidh dhomen ne Hotel Toni' />
     </div>
   )
 }
