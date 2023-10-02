@@ -16,7 +16,7 @@
     "@types/react-star-rating-component": "^1.4.1",
     "cookies-next": "^4.0.0",
     "emailjs": "^4.0.2",
-    "google-maps-react": "^2.0.6",
+    "google-maps-react": "^2.0.5",
     "heroicons": "^2.0.18",
     "i": "^0.3.7",
     "i18next": "^23.5.1",
