@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 
 export default function Votat() {
@@ -52,7 +53,7 @@ export default function Votat() {
               </div>
            
               <div className="relative mt-8 flex items-center gap-x-4">
-                <img src={vote.avtar} alt="" className="h-10 w-10 rounded-full bg-gray-500" />
+                <Image src={vote.avtar} alt="" className="h-10 w-10 rounded-full bg-gray-500" />
                 <div className="text-sm leading-6">
                   <p className="font-semibold text-gray-900">
                     <a href={vote.avtar}>

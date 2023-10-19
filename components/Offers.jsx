@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import ReservationForm from './ReservationForm';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Dhomat() {
   const [rooms, setRooms] = useState([]);
@@ -65,7 +66,7 @@ export default function Dhomat() {
             {rooms.map((room) => (
               <li key={room._id}>
                 {/* Render room details */}
-                <img className="aspect-[3/2] w-full rounded-2xl object-cover" src={room.imageUrl} alt="" />
+                <Image className="aspect-[3/2] w-full rounded-2xl object-cover" src={room.imageUrl} alt="" />
                 <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{room.description}</h3>
                 <p className="text-base leading-7 text-gray-600">{room.price}</p>
                 <button
