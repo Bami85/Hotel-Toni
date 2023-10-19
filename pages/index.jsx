@@ -6,13 +6,11 @@ import Hero from '../components/Hero'
 // import Instagram from '../components/Offers';
 import Footer from '../components/Footer'
 import useSWR from 'swr'
-import { useTranslation } from 'react-i18next'
-import i18n from './ i18n'
+
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
 export default function Home({ text, p }) {
-  const { t } = useTranslation()
 
   const router = useRouter()
   const id = router.query.id
@@ -27,8 +25,6 @@ export default function Home({ text, p }) {
         </Head>
         <div></div>
         <Hero
-          heading={t('welcome')}
-          message={t('description')}
           description=""
         />
         <div className="mx-auto max-w-2xl lg:max-w-4xl"></div>
@@ -38,8 +34,6 @@ export default function Home({ text, p }) {
           <div className="mx-auto max-w-2xl lg:max-w-4xl">
             <figure className="mt-10">
               <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
-                <p>{t('welcome')}</p>
-                <p>{t('description')}</p>
               </blockquote>
             </figure>
           </div>

@@ -1,16 +1,9 @@
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
-import { useTranslation } from 'react-i18next'
-import i18n from '../pages/ i18n'
+
 
 const Navbar = (props) => {
-  const { t } = useTranslation()
-
-  const handleLanguageChange = (lng) => {
-    i18n.changeLanguage(lng)
-  }
-
   const [banner, setBanner] = useState('')
   const [nav, setNav] = useState(false)
   const [color, setColor] = useState('transparent')
