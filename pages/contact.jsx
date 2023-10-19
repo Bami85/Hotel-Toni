@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import MapComponent from '../components/MapComponent';
 import Footer from '../components/Footer';
 import Bookning from '../components/Bookning';
 
