@@ -5,6 +5,7 @@ import enTranslations from '../locales/en.json'
 import frTranslations from '../locales/fr.json';
 import alTranslations from '../locales/al.json'
 
+
 i18n
   .use(initReactI18next)
   .init({
@@ -27,3 +28,6 @@ i18n
   });
 
 export default i18n;
+
+
+

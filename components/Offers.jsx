@@ -59,17 +59,19 @@ export default function Dhomat() {
     <>
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
+
           <ul
             role="list"
             className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
           >
+           
             {rooms.map((room) => (
               <li key={room._id}>
                 {/* Render room details */}
-                <Image className="aspect-[3/2] w-full rounded-2xl object-cover" src={room.imageUrl} alt="" />
+                <Image className="aspect-[3/2] w-full rounded-2xl object-cover" src={room.imageUrl} alt="" width='700'height='400'/>
                 <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{room.description}</h3>
                 <p className="text-base leading-7 text-gray-600">{room.price}</p>
-                <button
+                 <button
                   type="button"
                   className="rounded bg-black/10 px-2 py-1 text-sm font-semibold text-black shadow-sm hover:bg-white/20"
                   onClick={() => makeReservation(room._id)}
@@ -77,14 +79,19 @@ export default function Dhomat() {
                 >
                   {isRoomReserved(room._id) ? 'Dhoma e rezervuar' : 'Rezervo'}
                 </button>
+              
               </li>
-            ))}
+            ))}  
+       
           </ul>
+        
           {selectedRoomId && (
-            <ReservationForm roomId={selectedRoomId} onReservationConfirmed={handleReservationConfirmed} />
+            < ReservationForm roomId={selectedRoomId} onReservationConfirmed={handleReservationConfirmed} />
           )}
+  
 
           {reservation && <p className="mt-8">{reservation}</p>}
+   
         </div>
       </div>
     </>

@@ -54,6 +54,13 @@ export default function Votat() {
            
               <div className="relative mt-8 flex items-center gap-x-4">
                 <Image src={vote.avtar} alt="" className="h-10 w-10 rounded-full bg-gray-500" />
+                <Image
+                  src={slide.image}
+                  alt='/'
+                  width='700'
+                  height='400'
+                  objectFit='cover'
+                />
                 <div className="text-sm leading-6">
                   <p className="font-semibold text-gray-900">
                     <a href={vote.avtar}>

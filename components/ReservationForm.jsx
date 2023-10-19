@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React, { useState } from 'react'
 
 
@@ -37,8 +38,9 @@ const ReservationForm = ({ roomId, onReservationConfirmed }) => {
     <>
       <div className="min-h-screen flex items-center justify-center bg-cover custom-img">
         <div className="bg-white p-8 rounded-lg shadow-md max-w-md w-full">
+          <Link href ="/reservationForm">
           <h1 className="text-2xl font-bold mb-4">Prenoto dhome</h1>
-
+          </Link>
           <form onSubmit={handleSubmit}>
             <div className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
               <label htmlFor="Name" className="block mb-1">
@@ -102,6 +104,7 @@ const ReservationForm = ({ roomId, onReservationConfirmed }) => {
             >
               Konfirmo Reservimin
             </button>
+   
           </form>
         </div>
       </div>
